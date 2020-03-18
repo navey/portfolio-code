@@ -1,0 +1,149 @@
+/* This ensures the webpage doesn't automatically set margins. */
+body, html{
+    margin:0;
+    padding:0;
+}
+
+/* This is for the header of the website. */
+.header{
+    margin: 0;
+    padding: 20px;
+    background: rgb(201, 37, 37);
+    color: white;
+}
+
+/* This is for the name in the header */
+.name{
+    float: left;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+/* This is for the navigation bar. */
+.navigate{
+    background-color: rgb(201, 37, 37);
+    overflow: hidden;
+}
+/* These are for each tabs in the navigation bar. */
+.navigate a{
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Arial;
+    font-weight: bold;
+}
+/* This is for tabs that are being hovered on. */
+.navigate a:hover{
+    background-color: #ddd;
+    color: black;
+}
+/* This is for the tab that is currently displayed. */
+.navigate a.active{
+    background-color: rgb(231, 100, 100);
+    color: white;
+}
+
+/* This is the division for the main part of the home webpage. */
+.main{
+    text-align: center;
+    background-color: white;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* This is the division for the main part of the webpage. */
+.eduMain{
+    padding: 30px;
+    background-color: white;
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
+    animation: fade 2s;
+}
+
+/* This is for the intro dialogue text. */
+.intro{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
+}
+
+/* This is to center the picture of General Grievous. */
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* This is to format the resposne text. */
+.response{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* This is to apply the fade in animation for the response text. */
+.response{
+    animation: fade 3s;
+}
+
+/* This is to format the button. */
+.quote{
+    height: 60px;
+    width: 250px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* This is for the fade in animation. */
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* This is for the school name */
+.eduIntro{
+    font-family: Arial;
+    font-size: 30px;
+}
+
+/* Bullet points in Education */
+.bullet{
+    font-family: Arial;
+    font-size: 22px;
+}
+
+.collapsible {
+    background-color: rgb(201, 37, 37);
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 20px;
+}
+  
+/* Bullet points in Education Collapsibles*/
+.collBullet{
+    font-family: Arial;
+    font-size: 18px;
+}
+
+.active, .collapsible:hover {
+    background-color: #ddd;
+    color: black;
+}
+  
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
