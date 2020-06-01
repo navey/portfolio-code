@@ -54,7 +54,7 @@ class Projects extends React.Component{
 
         let i;
         for(i = 0; i < 7; i++){
-            if(index != i && language.localeCompare(projects[i].language) == 0)
+            if(index !== i && language.localeCompare(projects[i].language) === 0)
                 projects[i].open = false;
         }
 
@@ -81,7 +81,22 @@ class Projects extends React.Component{
 
                 <div>
                     <div className={"project-info " + (this.state.projects[0].open ? 'open' : 'none')}>
-                        Website
+                        <b>This Website</b><br></br>
+                        March 2020 - Present<br></br>
+                        <ul>
+                            <li>
+                                Utilized React to create portfolio website as a single page application
+                            </li>
+                            <li>
+                                Programmed website using HTML, CSS, and JavaScript
+                            </li>
+                            <li>
+                                Designed and organized website into Components that interact using React
+                            </li>
+                        </ul>
+                        Technologies: JavaScript, HTML, CSS, React<br></br>
+                        <a href="https://navey.github.io/#/">Click Here to View this Project</a> <br></br>
+                        <a href="https://github.com/navey/portfolio-code">Click Here to View the Code</a>
                     </div>
                 </div>
 
@@ -112,10 +127,24 @@ class Projects extends React.Component{
 
                 <div>
                     <div className={"project-info " + (this.state.projects[4].open ? 'open' : 'none')}>
-                        Workout Organizer
+                        <b>Workout Organizer</b><br></br>
+                        August 2019 - Present<br></br>
+                        <ul>
+                            <li>
+                                Utilized Tkinter to create an easy-to-use GUI
+                            </li>
+                            <li>
+                                Integrated a save feature to save any information you store in a session
+                            </li>
+                            <li>
+                                Implemented a display that shows you all the exercises and info you store
+                            </li>
+                        </ul>
+                        Technologies: Python, Tkinter, OOP<br></br>
+                        <a href="https://github.com/navey/WorkoutOrganizer">Click Here to View the Code</a>
                     </div>
                     <div className={"project-info " + (this.state.projects[1].open ? 'open' : 'none')}>
-                        RU-Single<br></br>
+                        <b>RU-Single</b><br></br>
                         February 2020<br></br>
                         <ul>
                             <li>
@@ -128,10 +157,13 @@ class Projects extends React.Component{
                                 Integrated the random forest model into the bot so the bot can predict your preferences
                             </li>
                         </ul>
-                        Technologies: Python, OpenCV, Selenium, PIL, NumPy
+                        Technologies: Python, OpenCV, Selenium, PIL, NumPy<br></br>
+                        <a href="https://github.com/navey/RU-Single">Click Here to View the Code</a><br></br><br></br>
+                        <b>Demo:</b><br></br>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/FTvJf7Yzhyk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <div className={"project-info " + (this.state.projects[2].open ? 'open' : 'none')}>
-                        RU-Home<br></br>
+                        <b>RU-Home</b><br></br>
                         November 2019<br></br>
                         <ul>
                             <li>
@@ -144,7 +176,8 @@ class Projects extends React.Component{
                                 Connected Firebase to app which takes images from the database and trains the AI to recognize those faces
                             </li>
                         </ul>
-                        Technologies: Python, OpenCV, Azure Face API, Firebase, Twilio, Dragonboard 410c
+                        Technologies: Python, OpenCV, Azure Face API, Firebase, Twilio, Dragonboard 410c<br></br>
+                        <a href="https://github.com/pintojonathan11/RU-Home">Click Here to View the Code</a>
                     </div>
                 </div>
 
@@ -169,10 +202,24 @@ class Projects extends React.Component{
 
                 <div>
                     <div className={"project-info " + (this.state.projects[3].open ? 'open' : 'none')}>
-                        Mood Music
+                        <b>Mood Music</b><br></br>
+                        October 2018<br></br>
+                        <ul>
+                            <li>
+                                Utilized the OpenWeatherMap API to recieve information on the weather given the phone's location
+                            </li>
+                            <li>
+                                Implemented feature to parse through the OWM response and return the temperature/weather
+                            </li>
+                            <li>
+                                Integrated the information into the app using Android Studio
+                            </li>
+                        </ul>
+                        Technologies: Java, Android Studio, OpenWeatherMap API, SoundCloud API<br></br>
+                        <a href="https://github.com/advil64/MoodMusic">Click Here to View the Code</a>
                     </div>
                     <div className={"project-info " + (this.state.projects[5].open ? 'open' : 'none')}>
-                        Battle Ships<br></br>
+                        <b>Battleships</b><br></br>
                         August 2018<br></br>
                         <ul>
                             <li>
@@ -188,7 +235,8 @@ class Projects extends React.Component{
                                 Implemented a save feature which will save your progress after exiting
                             </li>
                         </ul>
-                        Technologies: Java, Swing, OOP, Eclipse
+                        Technologies: Java, Swing, OOP, Eclipse<br></br>
+                        <a href="https://github.com/navey/Battle_Ships">Click Here to View the Code</a>
                     </div>
                 </div>
 
@@ -205,7 +253,7 @@ class Projects extends React.Component{
 
                 <div>
                     <div className={"project-info " + (this.state.projects[6].open ? 'open' : 'none')}>
-                        Git Recreation<br></br>
+                        <b>Git Recreation</b><br></br>
                         April 2020<br></br>
                         <ul>
                             <li>
