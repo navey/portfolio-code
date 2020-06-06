@@ -3,8 +3,6 @@ import React from 'react';
 import '../App.css';
 import '../naveyStyle.css';
 
-import Accordion from './Accordion';
-
 import rutgers1 from '../Images/rutgers1.jpg';
 
 
@@ -84,15 +82,13 @@ class Education extends React.Component{
                                             </ul>
                                         </div>
                                     </li>
-                                    <li>
-                                        <button type="button" className="collapsible">Other Subjects</button>
-                                    </li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </body>
-                <img class="center" id="rutgers1" src={rutgers1} style={{display:'block'}}/>
+                <br></br><br></br>
+                <img class="center" id="rutgers1" src={rutgers1} alt='Rutgers' style={{display:'block'}}/>
             </div>
         );
     }
