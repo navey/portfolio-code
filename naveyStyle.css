@@ -2,6 +2,7 @@
 body, html{
     margin:0;
     padding:0;
+    background-color: black;
 }
 
 /* Navigation Bar */
@@ -9,31 +10,43 @@ body, html{
 /* This is for the header of the website. */
 .header{
     margin: 0;
-    padding: 5px;
-    background: rgb(201, 37, 37);
+    background: black;
     color: white;
 }
 
-/* This is for the name in the header */
-.name{
+/* These are for the name in the header */
+.first-name{
     float: left;
     font-size: 30px;
     font-family: sans-serif;
     font-weight: bold;
-    padding: 20px;
+    padding-top: 20px;
+    margin-left: 3%;
+}
+
+.last-name{
+    float: left;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: lightcoral;
+    padding-top: 20px;
+    padding-left: 10px
 }
 
 /* This is for the navigation bar. */
 .navigate{
-    background-color: rgb(201, 37, 37);
+    background-color: black;
     overflow: hidden;
+    margin-right: 3%;
+    padding-top: 20px;
 }
 /* These are for each tabs in the navigation bar. */
 .navigate a{
     float: right;
     color: #f2f2f2;
     text-align: center;
-    padding: 14px 16px;
+    padding: 10px 10px;
     text-decoration: none;
     font-size: 17px;
     font-family: Arial;
@@ -58,11 +71,10 @@ body, html{
     padding: 20px;
     background-color: lightcoral;
     margin-top: 5%;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
     animation: fade 2s;
-    border: 5px solid;
-    border-color: darkred;
 }
 
 /* This is for the picture. */
@@ -76,7 +88,24 @@ body, html{
 .home-name{
     font-family: Arial;
     font-size: 50px;
+    font-weight: bold;
     color: white;
+}
+
+/* This is for the email and phone number in the homepage. */
+.home-info{
+    font-family: Arial;
+    font-size: 35px;
+    color: white;
+}
+
+/* This is for the "About Me" section in the homepage. */
+.home-intro{
+    font-family: Arial;
+    font-size: 20px;
+    color: white;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 /* This is for links in the home page. */
@@ -93,26 +122,10 @@ body, html{
     opacity: 0.6;
 }
 
-/* This is for the intro dialogue text. */
-.intro{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 50px;
-}
-
 /* This is to center the picture of General Grievous. */
 .center{
     margin-left: auto;
     margin-right: auto;
-}
-
-/* This is to format the resposne text. */
-.response{
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-/* This is to apply the fade in animation for the response text. */
-.response{
-    animation: fade 3s;
 }
 
 /* This is to format the button. */
@@ -138,7 +151,7 @@ body, html{
 /* This is the division for the main part of the webpage. */
 .eduMain{
     padding: 30px;
-    background-color: white;
+    background-color: rgb(58, 55, 55);
     margin-top: 2%;
     margin-left: 5%;
     margin-right: 5%;
@@ -149,12 +162,15 @@ body, html{
 .eduIntro{
     font-family: Arial;
     font-size: 30px;
+    font-weight:  bold;
+    color: lightcoral;
 }
 
 /* Bullet points in Education */
 .bullet{
     font-family: Arial;
     font-size: 22px;
+    color: white;
 }
 
 .collapsible {
@@ -173,6 +189,7 @@ body, html{
 .collBullet{
     font-family: Arial;
     font-size: 18px;
+    color: white;
 }
 
 .active, .collapsible:hover {
@@ -180,23 +197,23 @@ body, html{
     color: black;
 }
   
-.eduMain .content {
+.content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
     background-color: #f1f1f1;
 }
 
-.eduMain .content.open {
+.content.open {
     padding: 0 18px;
-    background-color: #f1f1f1;
+    background-color: white;
+    color: white;
 }
 
 /* Projects Component */
 
 .project-main{
     padding: 30px;
-    background-color: white;
     margin-top: 1%;
     margin-left: 7%;
     margin-right: 5%;
@@ -208,8 +225,8 @@ body, html{
 }
 
 .project-button {
-    height: 210px;
-    width: 210px;
+    height: 200px;
+    width: 200px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     background-color: white;
@@ -248,10 +265,112 @@ body, html{
     color: aliceblue;
     padding: 18px;
     font-size: 18px;
+    border-radius: 20px;
 } 
 
 /* This is for the language name */
 .projIntro{
     font-family: Arial;
     font-size: 25px;
+    color: white;
+}
+
+/* This is for the individual language boxes. */
+.proj-box{
+    background-color: rgb(58, 55, 55);
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+/* Skills Component */
+
+/* This is for the main division of the skills page. */
+.skills-main{
+    padding: 20px;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    animation: fade 2s;
+}
+
+/* This is for the division that contains the programming languages I know. */
+.skills-intro{
+    font-family: Arial;
+    font-size: 30px;
+    font-weight: bold;
+    color: lightcoral;
+}
+
+/* This is for all the sub headers. */
+.skills-sub{
+    font-family: Arial;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+}
+
+.skills-languages{
+    padding: 30px;
+    background-color: rgb(58, 55, 55);
+    color: white;
+    width: 45%;
+    float: left;
+}
+
+/* This is for the division that lists the tools I'm familiar with. */
+.skills-tools{
+    padding: 30px;
+    background-color: rgb(58, 55, 55);
+    color: white;
+    margin-bottom: 5%;
+    width: 45%;
+    float: right;
+}
+
+/* This is for the division that lists the technologies I'm familiar with. */
+.skills-tech{
+    padding: 30px;
+    background-color: rgb(58, 55, 55);
+    color: white;
+    clear: both;
+    display: table;
+    width: 100%;
+}
+
+.skills-tech-col{
+    padding: 10px;
+    background-color: rgb(58, 55, 55);
+    color: white;
+    float: left;
+    width: 33.33%;
+}
+
+/* Contact Me Component */
+
+/* This is used for the labels in the contact form. */
+.contact-label {
+    font-size: 20px;
+    color: white;
+}
+
+/* This is for the input boxes in the contact form. */
+.contact-input {
+    width: 350px;
+    height: 20px;
+    font-size: 15px;
+}
+
+/* This is for the message box in the contact form. */
+.contact-message {
+    width: 350px;
+    height: 200px;
+    font-size: 15px;
+}
+
+/* This is for the submit button in the contact form. */
+.contact-submit {
+    width: 100px;
+    height: 50px;
+    font-size: 20px;
 }
