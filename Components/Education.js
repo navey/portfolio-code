@@ -21,7 +21,7 @@ class Education extends React.Component{
                 }
             ]
         }
-        this.openAccordion = this.openAccordion.bind(this)
+        this.openAccordion = this.openAccordion.bind(this);
     }
 
     openAccordion(index){
@@ -40,7 +40,7 @@ class Education extends React.Component{
                         <h1 className="eduIntro">
                             Rutgers University - New Brunswick
                         </h1>
-                        <hr></hr>
+                        <hr className='underline-coral'></hr>
                         <ul>
                             <li>
                                 <h1 className="bullet"><b>Degree: </b> Bachelor of Science, Computer Science</h1>

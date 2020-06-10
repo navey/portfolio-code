@@ -31,7 +31,9 @@ class ContactMe extends React.Component{
 
     render(){
         return (
-            <form className='main' method='POST' onSubmit={this.handleSubmit.bind(this)}>
+            <form className='contact-main' method='POST' onSubmit={this.handleSubmit.bind(this)}>
+                <label className='contact-label'>*Currently not working*</label>
+                <br></br>
                 <label className='contact-label'>Name</label>
                 <br></br>
                 <input type='text' className='contact-input' value={this.state.name} onChange={this.changeName.bind(this)}/>

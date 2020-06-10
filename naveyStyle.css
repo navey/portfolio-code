@@ -50,7 +50,6 @@ body, html{
     text-decoration: none;
     font-size: 17px;
     font-family: Arial;
-    font-weight: bold;
 }
 /* This is for tabs that are being hovered on. */
 .navigate a:hover{
@@ -66,15 +65,37 @@ body, html{
 /* Home Component */
 
 /* This is the division for the main part of the home webpage. */
-.main{
-    text-align: center;
+.home-main{
     padding: 20px;
-    background-color: lightcoral;
     margin-top: 5%;
     margin-left: 10%;
     margin-right: 10%;
     margin-bottom: 10%;
+}
+
+.main-left{
+    text-align: center;
+    padding: 20px;
+    background-color: lightcoral;
+    width: 47%;
+    margin-bottom: 10%;
     animation: fade 2s;
+    float: left;
+}
+
+.home-right{
+    float: right;
+    width: 47%
+}
+
+.main-right{
+    text-align: center;
+    padding: 20px;
+    background-color: lightcoral;
+    margin-bottom: 10%;
+    animation: fade 2s;
+    width: 100%;
+    float: right;
 }
 
 /* This is for the picture. */
@@ -82,6 +103,15 @@ body, html{
     border-radius: 50%;
     border: 5px solid;
     border-color: whitesmoke;
+    display: inline-block;
+}
+
+/* This is for the mobile picture. */
+.profile-pic-mobile {
+    border-radius: 50%;
+    border: 5px solid;
+    border-color: whitesmoke;
+    display: none;
 }
 
 /* This is for the name in the homepage. */
@@ -164,6 +194,10 @@ body, html{
     font-size: 30px;
     font-weight:  bold;
     color: lightcoral;
+}
+
+.underline-coral{
+    border: 1px solid lightcoral;
 }
 
 /* Bullet points in Education */
@@ -280,6 +314,8 @@ body, html{
     background-color: rgb(58, 55, 55);
     padding: 20px;
     margin-bottom: 40px;
+    height: 25%;
+    overflow-x: auto;
 }
 
 /* Skills Component */
@@ -346,7 +382,48 @@ body, html{
     width: 33.33%;
 }
 
+/* Experience */
+.exp-main{
+    padding: 20px;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    animation: fade 2s;
+}
+
+.exp-entry{
+    background-color: rgb(58, 55, 55);
+    color: white;
+    margin-bottom: 5%;
+    padding: 20px;
+}
+
+.exp-intro{
+    font-family: Arial;
+    font-size: 30px;
+    font-weight:  bold;
+    color: lightcoral;
+}
+
+.exp-bullet{
+    font-family: Arial;
+    font-size: 18px;
+    color: white;
+}
+
 /* Contact Me Component */
+
+.contact-main{
+    text-align: center;
+    padding: 20px;
+    margin-top: 5%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    background-color: lightcoral;
+    animation: fade 2s;
+}
 
 /* This is used for the labels in the contact form. */
 .contact-label {
@@ -373,4 +450,73 @@ body, html{
     width: 100px;
     height: 50px;
     font-size: 20px;
+}
+
+/* Adjustments for mobile screens */
+
+@media (max-width: 720px){
+    .skills-languages, .skills-tools, .skills-tech-col{
+        float: none;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    /* This is for the input boxes in the contact form. */
+    .contact-input {
+        width: auto;
+        height: 20px;
+        font-size: 15px;
+    }
+
+    /* This is for the message box in the contact form. */
+    .contact-message {
+        width: auto;
+        height: 200px;
+        font-size: 15px;
+    }
+
+}
+
+@media (max-width: 1080px){
+    .home-main{
+        padding: 20px;
+        margin-top: 5%;
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-bottom: 10%;
+    }
+
+    .home-right{
+        float: none;
+        width: auto;
+        margin-bottom: 5%;
+    }
+
+    .main-left{
+        float: none;
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    /* This is for the name in the homepage. */
+    .home-name{
+        font-family: Arial;
+        font-size: 40px;
+        font-weight: bold;
+        color: white;
+    }
+
+    /* This is for the email and phone number in the homepage. */
+    .home-info{
+        font-family: Arial;
+        font-size: 25px;
+        color: white;
+    }
+
+    .profile-pic{
+        display: none;
+    }
+    .profile-pic-mobile{
+        display: inline-block;
+    }
 }
