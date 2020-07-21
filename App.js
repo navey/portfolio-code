@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   Route,
-  NavLink,
   HashRouter
 } from "react-router-dom";
 
@@ -9,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import './naveyStyle.css';
 
+import Navigation from './Components/Navigation'
 import Home from './Components/Home';
 import Education from './Components/Education';
 import Projects from './Components/Projects';
@@ -21,23 +21,7 @@ export default class App extends React.Component{
     return (
       <HashRouter>
         <div>
-            <div className="header">
-              <div className="first-name">
-                Naveenan
-              </div>
-              <div className='last-name'>
-                Yogeswaran
-              </div>
-  
-              <div className="navigate">
-                <NavLink to="/contactme">Contact Me</NavLink>
-                <NavLink to="/skills">Skills</NavLink>
-                <NavLink to="/experience">Experience</NavLink>
-                <NavLink to="/projects">Projects</NavLink>
-                <NavLink to="/education">Education</NavLink>
-                <NavLink exact to="/">Home</NavLink>
-              </div> 
-            </div>
+            <Navigation />
 
             <div>
               <Route exact path='/' component={Home}/>

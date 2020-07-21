@@ -25,13 +25,10 @@ body, html{
 }
 
 .last-name{
-    float: left;
     font-size: 30px;
     font-family: sans-serif;
     font-weight: bold;
     color: lightcoral;
-    padding-top: 20px;
-    padding-left: 10px
 }
 
 /* This is for the navigation bar. */
