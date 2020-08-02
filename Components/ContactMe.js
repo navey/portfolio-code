@@ -1,7 +1,10 @@
 import React from 'react';
 import axios from 'axios';
 
+import { TextField, Button } from '@material-ui/core';
+
 import '../naveyStyle.css';
+
 
 class ContactMe extends React.Component{
     constructor(props) {
@@ -31,24 +34,45 @@ class ContactMe extends React.Component{
 
     render(){
         return (
-            <form className='contact-main' method='POST' onSubmit={this.handleSubmit.bind(this)}>
-                <label className='contact-label'>*Currently not working*</label>
-                <br></br>
-                <label className='contact-label'>Name</label>
-                <br></br>
-                <input type='text' className='contact-input' value={this.state.name} onChange={this.changeName.bind(this)}/>
-                <br></br><br></br>
-                <label className='contact-label'>Email</label>
-                <br></br>
-                <input type='text' className='contact-input' value={this.state.email} onChange={this.changeEmail.bind(this)}/>
-                <br></br><br></br>
-                <label className='contact-label'>Message</label>
-                <br></br>
-                <textarea className='contact-message' value={this.state.message} onChange={this.changeMessage.bind(this)}/>
-                <br></br><br></br>
-
-                <button type='submit' className='contact-submit'>Submit</button>
-            </form>
+            <div className='contact-main'>
+                <h1 className='contact-label'>Contact Me (Currently in development)</h1>
+                <form>
+                    <TextField
+                        id="name-input"
+                        label="Name"
+                        style={{ margin: 8 }}
+                        placeholder="Name"
+                        fullWidth
+                        margin="normal"
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                    />
+                    <br/><br/>
+                    <TextField
+                        id="email-input"
+                        label="Email Address"
+                        style={{ margin: 8 }}
+                        placeholder="Email Address"
+                        fullWidth
+                        margin="normal"
+                        InputLabelProps={{
+                            shrink: true,
+                        }}
+                    />
+                    <br/><br/>
+                    <TextField
+                        id="message-input"
+                        label="Message"
+                        style={{ margin: 8 }}
+                        multiline
+                        fullWidth
+                        rowsMax={8}
+                    />
+                    <br/><br/>
+                    <Button variant="contained">Submit</Button>
+                </form>
+            </div>
         )
     }
 }

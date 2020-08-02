@@ -34,7 +34,7 @@ export default class Navigation extends React.Component {
     getMobileMenu(){
         return(
             <div>
-            <AppBar position="static" style={{ background: '#000000' }}>
+            <AppBar position="static" style={{ background: '#161616' }}>
               <Toolbar>
                 <Grid container direction = "row" justify = "space-between" alignItems="center">
                     <Typography variant = "h6" className='last-name'>
@@ -76,7 +76,7 @@ export default class Navigation extends React.Component {
 
     getMenu(){
         return(
-            <AppBar position="static" style={{ background: '#000000' }}>
+            <AppBar position="static" style={{ background: '#161616' }}>
                 <Toolbar>
                     <Grid container spacing = {24} justify = "space-between">
                         <Grid item>
