@@ -45,6 +45,11 @@ class Projects extends React.Component{
                     name: 'git-recreation',
                     open: false,
                     language: 'c'
+                },
+                {
+                    name: 'workout-generator',
+                    open: false,
+                    language: 'javascript'
                 }
             ]
         };
@@ -83,6 +88,13 @@ class Projects extends React.Component{
                             </button>
                         </div>
 
+                        <div className='gradient-border' id='website'>
+                            <button className='project-button' data-hover='This Website uses JavaScript, MySQL, React, Node.js, Express.js, AWS' onClick={() => this.openDescription(7)}>
+                                <b>Workout Generator</b><br></br>
+                                July 2020 - Present
+                            </button>
+                        </div>
+
                     </div>
 
                     <div>
@@ -103,6 +115,24 @@ class Projects extends React.Component{
                             Technologies: JavaScript, HTML, CSS, React<br></br><br></br>
                             <a href="https://navey.github.io/#/" target="_blank" rel="noopener noreferrer"><img src={demo} className='home-pic' alt='demo-website' /></a>
                             <a href="https://github.com/navey/portfolio-code" target="_blank" rel="noopener noreferrer"><img src={github} className='home-pic' alt='github-website'/></a>
+                        </div>
+
+                        <div className={"project-info " + (this.state.projects[7].open ? 'open' : 'none')}>
+                            <b>Workout Generator</b><br></br>
+                            March 2020 - Present<br></br>
+                            <ul>
+                                <li>
+                                    Website that generates a workout given what muscles need to be worked and what equipment is available
+                                </li>
+                                <li>
+                                    Implemented front-end using React with components made by myself and components from Material-UI
+                                </li>
+                                <li>
+                                    Implemented back-end and REST API using Node.js, Express.js, AWS and MySQL; allowing workouts to be generated
+                                </li>
+                            </ul>
+                            Technologies: JavaScript, HTML, CSS, React, Node.js, Express.js, REST API, AWS RDS<br></br><br></br>
+                            <a href="https://github.com/navey/WorkoutGenerator" target="_blank" rel="noopener noreferrer"><img src={github} className='home-pic' alt='github-wg'/></a>
                         </div>
                     </div>
                 </div>
