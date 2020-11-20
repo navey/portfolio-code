@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-scroll';
 
 import { AppBar, Toolbar, Typography, Button, Grid, List, ListItem, SwipeableDrawer} from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -34,7 +34,7 @@ export default class Navigation extends React.Component {
     getMobileMenu(){
         return(
             <div>
-            <AppBar position="static" style={{ background: '#161616' }}>
+            <AppBar style={{ background: '#161616' }}>
               <Toolbar>
                 <Grid container direction = "row" justify = "space-between" alignItems="center">
                     <Typography variant = "h6" className='last-name'>
@@ -59,12 +59,67 @@ export default class Navigation extends React.Component {
                  onKeyDown={()=>{this.setState({menu:false})}}>
     
                 <List>
-                   <ListItem component={Link} exact to="/" key = {1} button divider> Home </ListItem>
-                   <ListItem component={Link} to="/education" key = {2} button divider> Education </ListItem>
-                   <ListItem component={Link} to="/projects" key = {3} button divider> Projects </ListItem>
-                   <ListItem component={Link} to="/experience" key = {4} button divider> Experience </ListItem>
-                   <ListItem component={Link} to="/skills" key = {5} button divider> Skills </ListItem>
-                   <ListItem component={Link} to="/contactme" key = {6} button divider> Contact Me </ListItem>
+                  <ListItem 
+                    component={Link} 
+                    activeClass="active"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-10}
+                    duration={500}>
+                      Home 
+                  </ListItem>
+                  <ListItem 
+                    component={Link} 
+                    activeClass="active"
+                    to="education"
+                    spy={true}
+                    smooth={true}
+                    offset={-10}
+                    duration={500}> 
+                      Education 
+                    </ListItem>
+                  <ListItem 
+                    component={Link} 
+                    activeClass="active"
+                    to="project"
+                    spy={true}
+                    smooth={true}
+                    offset={-10}
+                    duration={500}>
+                      Projects
+                  </ListItem>
+                  <ListItem 
+                    component={Link} 
+                    activeClass="active"
+                    to="skills"
+                    spy={true}
+                    smooth={true}
+                    offset={-10}
+                    duration={500}> 
+                      Skills 
+                  </ListItem>
+                  <ListItem 
+                    component={Link} 
+                    activeClass="active"
+                    to="experience"
+                    spy={true}
+                    smooth={true}
+                    offset={-10}
+                    duration={500}>
+                      Experience
+                  </ListItem>
+                  <ListItem 
+                    component={Link} 
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-10}
+                    duration={500}> 
+                      Contact Me 
+                  </ListItem>
+
                  </List>
     
              </div>
@@ -76,21 +131,94 @@ export default class Navigation extends React.Component {
 
     getMenu(){
         return(
-            <AppBar position="static" style={{ background: '#161616' }}>
+            <AppBar position="fixed" style={{ background: '#161616' }} backgroundColor="transparent">
                 <Toolbar>
-                    <Grid container spacing = {24} justify = "space-between">
+                  <Grid
+                    justify="space-between" 
+                    container 
+                    spacing={10}
+                    >
                         <Grid item>
-                            <Typography variant="h6" className='last-name'>
+                            <Typography variant="h6" color="inherit">
                                 Naveenan Yogeswaran
                             </Typography>
                         </Grid>
+
                         <Grid item>
-                            <Button color="inherit" component={Link} exact to="/">Home</Button>
-                            <Button color="inherit" component={Link} to="/education">Education</Button>
-                            <Button color="inherit" component={Link} to="/projects">Projects</Button>
-                            <Button color="inherit" component={Link} to="/experience">Experience</Button>
-                            <Button color="inherit" component={Link} to="/skills">Skills</Button>
-                            <Button color="inherit" component={Link} to="/contactme">Contact Me</Button>
+                            <div>
+                            <Button raised="true" color="inherit" >
+                                <Link
+                                    activeClass="active"
+                                    to="home"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-10}
+                                    duration={500}
+                                    >
+                                    Home
+                                </Link>
+                            </Button>
+                            <Button raised="true" color="inherit" >
+                                <Link
+                                    activeClass="active"
+                                    to="education"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-10}
+                                    duration={500}
+                                    >
+                                    Education
+                                </Link>
+                            </Button>
+                            <Button raised="true" color="inherit" >
+                                <Link
+                                    activeClass="active"
+                                    to="project"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-10}
+                                    duration={500}
+                                    >
+                                    Projects
+                                </Link>
+                            </Button>
+                            <Button raised="true" color="inherit" >
+                                <Link
+                                    activeClass="active"
+                                    to="skills"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-10}
+                                    duration={500}
+                                    >
+                                    Skills
+                                </Link>
+                            </Button>
+                            <Button raised="true" color="inherit" >
+                                <Link
+                                    activeClass="active"
+                                    to="experience"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-10}
+                                    duration={500}
+                                    >
+                                    Experience
+                                </Link>
+                            </Button>
+                            <Button raised="true" color="inherit" >
+                                <Link
+                                    activeClass="active"
+                                    to="contact"
+                                    spy={true}
+                                    smooth={true}
+                                    offset={-10}
+                                    duration={500}
+                                    >
+                                    Contact Me
+                                </Link>
+                            </Button>
+                            </div>
                         </Grid>
                     </Grid>
                 </Toolbar>

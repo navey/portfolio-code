@@ -75,7 +75,7 @@ class Projects extends React.Component{
 
     render(){
         return(
-            <div className='project-main'>
+            <div className='project-main' id="project">
 
                 <div className='proj-box'>
                     <h1 className='projIntro'>JavaScript</h1>

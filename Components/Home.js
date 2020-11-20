@@ -16,7 +16,7 @@ class Home extends React.Component{
 
   render(){
     return (
-      <div className='home-main'>
+      <div className='home-main' id="home">
           <div className="main-left">
 
               <img src={profile} className='profile-pic' alt='Profile'/>

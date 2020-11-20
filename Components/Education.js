@@ -10,6 +10,7 @@ class Education extends React.Component{
     constructor(props){
         super(props);
         this.state = {
+            mobile : false,
             coursework: [
                 {
                     subject: 'Computer Science',
@@ -24,6 +25,21 @@ class Education extends React.Component{
         this.openAccordion = this.openAccordion.bind(this);
     }
 
+    componentWillMount(){
+        if(window.innerWidth <= 900){
+          this.setState({mobile:true});
+        }
+    
+        window.addEventListener('resize',()=>{
+          if(window.innerWidth <= 900){
+            this.setState({mobile:true});
+          }
+          else{
+            this.setState({mobile:false})
+          }
+        });
+    }
+
     openAccordion(index){
         var coursework = this.state.coursework;
         coursework[index].open = !coursework[index].open;
@@ -34,7 +50,7 @@ class Education extends React.Component{
 
     render(){
         return(
-            <div>
+            <div className="edu-page" id="education">
                 <body>
                     <div className="eduMain">
                         <h1 className="eduIntro">
@@ -65,6 +81,8 @@ class Education extends React.Component{
                                                 <li><a className="collBullet" href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-211-computer-architecture">Computer Architecture</a></li>
                                                 <li><a className="collBullet" href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-214-systems-programming">Systems Programming</a></li>
                                                 <li><a className="collBullet" href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-336-principles-of-information-and-data-management">Principles Of Information and Data Management</a></li>
+                                                <li><a className="collBullet" href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-344-design-and-analysis-of-computer-algorithms">Design and Analysis of Computer Algorithms</a></li>
+                                                <li><a className="collBullet" href="https://www.cs.rutgers.edu/academics/undergraduate/course-synopses/course-details/01-198-213-software-methodology">Software Methodology</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -79,6 +97,7 @@ class Education extends React.Component{
                                                 <li><a className="collBullet" href="https://www.math.rutgers.edu/academics/undergraduate/courses/948-01-640-250-introductory-linear-algebra">Introduction to Linear Algebra</a></li>
                                                 <li><a className="collBullet" href="https://www.math.rutgers.edu/academics/undergraduate/courses/963-01-640-354-linear-optimization">Linear Optimization</a></li>
                                                 <li><a className="collBullet" href="https://www.math.rutgers.edu/academics/undergraduate/courses/989-01-640-477-mathematical-theory-of-probability">Mathematical Theory of Probability</a></li>
+                                                <li><a className="collBullet" href="https://www.math.rutgers.edu/academics/undergraduate/courses/991-01-640-481-mathematical-theory-of-statistics">Mathematical Theory of Statistics</a></li>
                                             </ul>
                                         </div>
                                     </li>
@@ -88,7 +107,7 @@ class Education extends React.Component{
                     </div>
                 </body>
                 <br></br><br></br>
-                <img class="center" id="rutgers1" src={rutgers1} alt='Rutgers' style={{display:'block'}}/>
+                {this.state.mobile ? "" : <img class="center" id="rutgers1" src={rutgers1} alt='Rutgers' style={{display:'block'}}/>}
             </div>
         );
     }

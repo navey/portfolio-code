@@ -10,31 +10,60 @@ class ContactMe extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            name: '',
-            email: '',
-            message: ''
+            sendEmail : {
+                name: '',
+                email: '',
+                message: ''
+            },
+            sent: false
         };
+        this.changeName = this.changeName.bind(this);
+        this.changeEmail = this.changeEmail.bind(this);
+        this.changeMessage = this.changeMessage.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.displaySentMessage = this.displaySentMessage.bind(this); 
     }
 
     changeName(e){
-        this.setState({name: e.target.value});
+        var emailProp = {...this.state.sendEmail};
+        emailProp["name"] = e.target.value;
+        this.setState({sendEmail : emailProp});
     }
 
     changeEmail(e){
-        this.setState({email: e.target.value});
+        var emailProp = {...this.state.sendEmail};
+        emailProp["email"] = e.target.value;
+        this.setState({sendEmail : emailProp});
     }
 
     changeMessage(e){
-        this.setState({message: e.target.value});
+        var emailProp = {...this.state.sendEmail};
+        emailProp["message"] = e.target.value;
+        this.setState({sendEmail : emailProp});
     }
 
     handleSubmit(e){
         e.preventDefault();
+        if(this.state.sendEmail.name.length === 0 || this.state.sendEmail.email.length === 0 || this.state.sendEmail.message.length === 0){
+            return;
+        }
+        axios.post('/send', this.state.sendEmail)
+        .then(() => {
+            console.log("Email Sent.");
+            this.setState({sent: true});
+        })
+        .catch(error => console.log(error));
+    }
+
+    displaySentMessage(){
+        return(
+            <h1 className='contact-label'>Message has been sent.</h1>
+        );
     }
 
     render(){
         return (
-            <div className='contact-main'>
+            <div className='contact-main' id="contact">
                 <h1 className='contact-label'>Contact Me (Currently in development)</h1>
                 <form>
                     <TextField
@@ -44,6 +73,7 @@ class ContactMe extends React.Component{
                         placeholder="Name"
                         fullWidth
                         margin="normal"
+                        onChange={(e) => this.changeName(e)}
                         InputLabelProps={{
                             shrink: true,
                         }}
@@ -56,6 +86,7 @@ class ContactMe extends React.Component{
                         placeholder="Email Address"
                         fullWidth
                         margin="normal"
+                        onChange={(e) => this.changeEmail(e)}
                         InputLabelProps={{
                             shrink: true,
                         }}
@@ -67,10 +98,12 @@ class ContactMe extends React.Component{
                         style={{ margin: 8 }}
                         multiline
                         fullWidth
+                        onChange={(e) => this.changeMessage(e)}
                         rowsMax={8}
                     />
                     <br/><br/>
-                    <Button variant="contained">Submit</Button>
+                    <Button variant="contained" onClick={(e) => this.handleSubmit(e)}>Submit</Button>
+                    {this.state.sent ? this.displaySentMessage() : ""}
                 </form>
             </div>
         )

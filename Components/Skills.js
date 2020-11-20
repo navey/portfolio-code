@@ -57,6 +57,7 @@ class Skills extends React.Component{
                 - Principles of Information and Data Management<br/><br/>
                 Used in Projects:<br/>
                 - This Website<br/>
+                - Workout Generator<br />
                 - Airline Ticket Purchaser (No longer active)<br/>
             </Tooltip>
         );
@@ -69,6 +70,7 @@ class Skills extends React.Component{
                 Used in Courses:<br/>
                 - Principles of Information and Data Management<br/><br/>
                 Used in Projects:<br/>
+                - Workout Generator<br />
                 - Airline Ticket Purchaser (No longer active)<br/>
             </Tooltip>
         );
@@ -79,6 +81,25 @@ class Skills extends React.Component{
             <Tooltip {...props}>
                 Used in Projects:<br/>
                 - This Website<br/>
+                - Workout Generator<br />
+            </Tooltip>
+        );
+    }
+
+    renderNodeInfo(props){
+        return(
+            <Tooltip {...props}>
+                Used in Projects:<br/>
+                - Workout Generator<br />
+            </Tooltip>
+        );
+    }
+
+    renderExpressInfo(props){
+        return(
+            <Tooltip {...props}>
+                Used in Projects:<br/>
+                - Workout Generator<br />
             </Tooltip>
         );
     }
@@ -111,6 +132,7 @@ class Skills extends React.Component{
                 Taught in Courses:<br/>
                 - Principles of Information and Data Management<br/><br/>
                 Used in Projects:<br/>
+                - Workout Generator<br />
                 - Airline Ticket Purchaser (No longer active)<br/>
             </Tooltip>
         );
@@ -122,6 +144,7 @@ class Skills extends React.Component{
                 Taught in Courses:<br/>
                 - Principles of Information and Data Management<br/><br/>
                 Used in Projects:<br/>
+                - Workout Generator<br />
                 - Airline Ticket Purchaser (No longer active)<br/>
             </Tooltip>
         );
@@ -133,6 +156,7 @@ class Skills extends React.Component{
                 Taught in Courses:<br/>
                 - Principles of Information and Data Management<br/><br/>
                 Used in Projects:<br/>
+                - Workout Generator<br />
                 - Airline Ticket Purchaser (No longer active)<br/>
             </Tooltip>
         );
@@ -160,7 +184,7 @@ class Skills extends React.Component{
 
     render(){
         return(
-            <div className='skills-main'>
+            <div className='skills-main' id="skills">
                 <div>
                     <div className='skills-languages'>
                         <h1 className='skills-intro'>Languages</h1>
@@ -211,7 +235,7 @@ class Skills extends React.Component{
                                 <img src={icon} alt='js-icon'/>
                             </OverlayTrigger>
                         </h1>
-                        <ProgressBar variant='success' striped now={50}/>
+                        <ProgressBar variant='success' striped now={85}/>
                         <br></br><br></br>
                         <h1 className='skills-sub'>
                             SQL &nbsp;
@@ -262,6 +286,39 @@ class Skills extends React.Component{
                         </h1>
                         <br></br>
                         <h1 className='skills-sub'>
+                            - Node.js &nbsp;
+                            <OverlayTrigger
+                                placement="top"
+                                delay={{ show: 250, hide: 400 }}
+                                overlay={this.renderNodeInfo}
+                            >
+                                <img src={icon} alt='react-icon'/>
+                            </OverlayTrigger>
+                        </h1>
+                        <br></br>
+                        <h1 className='skills-sub'>
+                            - Express.js &nbsp;
+                            <OverlayTrigger
+                                placement="top"
+                                delay={{ show: 250, hide: 400 }}
+                                overlay={this.renderExpressInfo}
+                            >
+                                <img src={icon} alt='react-icon'/>
+                            </OverlayTrigger>
+                        </h1>
+                        <br></br>
+                        <h1 className='skills-sub'>
+                            - REST API Design &nbsp;
+                            <OverlayTrigger
+                                placement="top"
+                                delay={{ show: 250, hide: 400 }}
+                                overlay={this.renderReactInfo}
+                            >
+                                <img src={icon} alt='react-icon'/>
+                            </OverlayTrigger>
+                        </h1>
+                        <br></br>
+                        <h1 className='skills-sub'>
                             - TCP/IP Socket Programming &nbsp;
                             <OverlayTrigger
                                 placement="top"
@@ -272,16 +329,6 @@ class Skills extends React.Component{
                             </OverlayTrigger>
                         </h1>
                         <br></br>
-                        <h1 className='skills-sub'>
-                            - Multi-threading &nbsp;
-                            <OverlayTrigger
-                                placement="top"
-                                delay={{ show: 250, hide: 400 }}
-                                overlay={this.renderMultithreadInfo}
-                            >
-                                <img src={icon} alt='multithread-icon'/>
-                            </OverlayTrigger>
-                        </h1>
                     </div>
                     <div className='skills-tech-col'>
                         <h1 className='skills-sub'>
@@ -314,6 +361,17 @@ class Skills extends React.Component{
                                 overlay={this.renderMySQLInfo}
                             >
                                 <img src={icon} alt='mysql-icon'/>
+                            </OverlayTrigger>
+                        </h1>
+                        <br></br>
+                        <h1 className='skills-sub'>
+                            - Multi-threading &nbsp;
+                            <OverlayTrigger
+                                placement="top"
+                                delay={{ show: 250, hide: 400 }}
+                                overlay={this.renderMultithreadInfo}
+                            >
+                                <img src={icon} alt='multithread-icon'/>
                             </OverlayTrigger>
                         </h1>
                     </div>

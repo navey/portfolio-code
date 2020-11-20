@@ -6,7 +6,7 @@ class Experience extends React.Component{
 
     render(){
         return(
-            <div className='exp-main'>
+            <div className='exp-main' id="experience">
                 <div className='exp-entry'>
                     <h1 className='exp-intro'>Research Assistant</h1>
                     <h1 className='exp-bullet'>Rutgers University Computational Biomedicine Imaging and Modeling Center</h1>
